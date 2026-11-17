@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rankedit-rules"
+version = "0.1.0"
+description = "Weighted rank aggregation with scoring, proportional, committee-based and Kemeny rules"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{name = "Patrick Lederer"}]
+requires-python = ">=3.10"
+dependencies = ["PuLP==3.3.2"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.data-files]
+"share/rankedit-rules" = ["CITATION.cff"]
